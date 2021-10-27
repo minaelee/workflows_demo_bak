@@ -4,8 +4,7 @@ import sys
 def main():
     print("Hello World!" + str(sys.version_info))
     if sys.version_info >= (3, 6) and sys.version_info < (3, 7):
-        # let's make this script fail for python 3.6
-        x = 1/0
+        raise Exception("This app is not compatible with Python 3.6.")
         
         
 if __name__ == "__main__":
